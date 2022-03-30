@@ -36,7 +36,16 @@ const UserSchema = new mongoose.Schema({
     city: {
         type: String,
     },
+    followers: {
+        type: Array,
+        default: [],
+    },
+    followings: {
+        type: Array,
+        default: [],
+    },
 },
+
     { timestamps: true }
 );
 module.exports = mongoose.model("User", UserSchema);
